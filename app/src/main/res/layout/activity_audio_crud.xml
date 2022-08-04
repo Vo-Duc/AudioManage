@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_audio_crud"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#363537"
+            android:minHeight="?attr/actionBarSize"
+            app:title="Audio Manage"
+            android:titleTextColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleTextColor="@android:color/white">
+            <ImageView
+                android:id="@+id/btn_Back_audio_crud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@drawable/icon_back">
+
+            </ImageView>
+
+        </androidx.appcompat.widget.Toolbar>
+        <ImageView
+            android:id="@+id/imageViewCRUDFileAudio"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
+            app:srcCompat="@drawable/icons8_mp3_64" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout3"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="300dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="24dp"
+            android:hint="Tên file audio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.424"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_audio_crud">
+
+            <EditText
+                android:id="@+id/editTextAudioNameCRUD"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/buttonAddAudioCRUD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Thêm"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toStartOf="@+id/buttonUpdateAudioCRUD"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewCRUDFileAudio" />
+
+        <Button
+            android:id="@+id/buttonUpdateAudioCRUD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Cập nhật"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toStartOf="@+id/buttonRemoveAudioCRUD"
+            app:layout_constraintStart_toEndOf="@+id/buttonAddAudioCRUD"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewCRUDFileAudio" />
+
+        <Button
+            android:id="@+id/buttonRemoveAudioCRUD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Xoá"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toStartOf="@+id/buttonAllAudioCRUD"
+            app:layout_constraintStart_toEndOf="@+id/buttonUpdateAudioCRUD"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewCRUDFileAudio" />
+
+
+        <ListView
+            android:id="@+id/listViewAudioCRUD"
+            android:layout_width="0dp"
+            android:layout_height="2000dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonAddAudioCRUD" />
+
+        <Button
+            android:id="@+id/buttonAllAudioCRUD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Tất cả"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/buttonRemoveAudioCRUD"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewCRUDFileAudio" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
